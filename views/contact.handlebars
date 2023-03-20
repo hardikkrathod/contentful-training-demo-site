@@ -1,0 +1,26 @@
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0">
+        <a href="/">Home</a> <span class="mx-2 mb-0">/</span>
+        <strong class="text-black">Contact</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-2">
+        <h2 class="h3 text-black">{{contactData.title}}</h2>
+      </div>
+      <div class="col-12 banner-1 bg-light banner-contact"
+        style="background-image: url('{{contactData.image.fields.file.url}}');">
+        <div class="p-4 pt-0 mb-3 rounded">
+          {{{contactData.address}}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

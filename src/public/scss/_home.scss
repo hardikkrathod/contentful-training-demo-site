@@ -1,0 +1,64 @@
+.header-primary {
+    color: #a00404;
+    backface-visibility: hidden;
+    /* background: royalblue; */
+    /* animation: shake 1s ease-out; */
+    margin-bottom: 6rem;
+}
+
+.header-primary--main {
+    text-transform: uppercase;
+    display: block;
+   
+    font-weight: 400;
+    letter-spacing: 10px;
+    animation: moveInLeft 1s ease-out;
+
+}
+
+.header-primary--sub {
+    display: block;
+ 
+    letter-spacing: 10px;
+    text-align: center;
+    animation: moveInRight 1s ease-out;
+}
+.dropdown-divider {
+    height: 0;
+    margin: 0;
+}
+
+@keyframes moveInLeft {
+
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+
+    80% {
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+@keyframes moveInRight {
+
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80% {
+        transform: translateX(-1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

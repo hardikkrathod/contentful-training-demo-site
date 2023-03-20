@@ -1,0 +1,51 @@
+<div class="site-wrap">
+    <div class="site-navbar py-2">
+      {{!-- <div class="search-wrap">
+        <div class="container">
+          <a href="#" class="search-close js-search-close"><span class="icon-close2"></span></a>
+          <form action="/search" method="get">
+            <input type="text" class="form-control" name="q" id="q" placeholder="Search keyword and hit enter...">
+          </form>
+        </div>
+      </div> --}}
+
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="logo">
+            <div class="site-logo">
+              <a href="{{headerData.logoUrl}}" class="js-logo-clone">
+                <img src="{{headerData.logo.fields.file.url}}" alt="{{headerData.logo.fields.title}}" style="width: 120px;">
+              </a>
+            </div>
+          </div>
+          <div class="main-nav d-none d-lg-block">
+            <nav class="site-navigation text-right text-md-center" role="navigation">
+              <ul class="site-menu js-clone-nav d-none d-lg-block">
+                {{#each headerData.navMenus}}
+                {{#if this.fields.subMenu}}
+                <li class="has-children">
+                  <a href="#">{{this.fields.menuName}}</a>
+                  <ul class="dropdown">
+                    {{#each this.fields.subMenu}}
+                    <li><a href="{{this.fields.submenuUrl}}">{{this.fields.submenuName}}</a></li>
+                    {{/each}}
+                     <div class="dropdown-divider"></div>
+                     <li><a href="/product/">All Products</a></li>
+                  </ul>
+                </li>
+                {{else}}
+                <li><a href="{{this.fields.menuUrl}}">{{this.fields.menuName}}</a></li>
+                {{/if}}
+                {{/each}}
+              </ul>
+            </nav>
+          </div>
+          <div class="icons">
+            {{!-- <a href="#" class="icons-btn d-inline-block js-search-open"><span class="icon-search"></span></a> --}}
+            
+            <a href="#" class="site-menu-toggle js-menu-toggle ml-3 d-inline-block d-lg-none"><span
+                class="icon-menu"></span></a>
+          </div>
+        </div>
+      </div>
+    </div>

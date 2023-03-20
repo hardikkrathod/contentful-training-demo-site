@@ -1,0 +1,80 @@
+<style>
+  .bg-hero {
+    background-image: url({{indexData.bgImage.fields.file.url}});
+  }
+</style>
+
+<div class="site-blocks-cover bg-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 mx-auto order-lg-2 align-self-center">
+        <div class="site-block-cover-content text-center">
+          <h2 class="sub-title">{{indexData.subTitle}}</h2>
+          <h1>{{{indexData.title}}}</h1>
+          <p>
+            <a href="{{indexData.button.fields.url}}"
+              class="btn btn-primary px-5 py-3">{{indexData.button.fields.text}}</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section text-center col-12">
+        <h2 class="text-uppercase">{{indexData.section1Title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 block-3 products-wrap">
+        <div class="nonloop-block-3 owl-carousel">
+          {{#each indexData.popularProducts}}
+          <div class="text-center item mb-4">
+            <a href="{{this.fields.productUrl}}"> <img src="{{this.fields.image.fields.file.url}}"
+                alt="{{this.fields.image.fields.title}}"></a>
+            <h3 class="text-dark"><a href="{{this.fields.productUrl}}">{{this.fields.name}}</a></h3>
+
+          </div>
+          {{/each}}
+        </div>
+      </div>
+      
+    </div>
+      <div class="row mt-5">
+      <div class="col-12 text-center">
+        <a href="{{indexData.button1.fields.url}}"
+          class="btn btn-primary px-4 py-3">{{indexData.button1.fields.text}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="title-section text-center col-12">
+        <h2 class="text-uppercase">{{indexData.section2Title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 block-3 products-wrap">
+        <div class="nonloop-block-3 owl-carousel">
+          {{#each indexData.newProducts}}
+          <div class="text-center item mb-4">
+            <a href="{{this.fields.productUrl}}"> <img src="{{this.fields.image.fields.file.url}}"
+                alt="{{this.fields.image.fields.title}}"></a>
+            <h3 class="text-dark"><a href="{{this.fields.productUrl}}">{{this.fields.name}}</a></h3>
+
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

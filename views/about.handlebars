@@ -1,0 +1,81 @@
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0">
+        <a href="/">Home</a> <span class="mx-2 mb-0">/</span>
+        <strong class="text-black">About</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section custom-border-bottom" data-aos="fade">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <div class="block-16">
+          <figure>
+            <img src="{{aboutData.section1.fields.image.fields.file.url}}"
+              alt="{{aboutData.section1.fields.image.fields.title}}" class="img-fluid rounded">
+          </figure>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-5">
+        <div class="site-section-heading pt-3 mb-4">
+          <h2 class="text-black">{{aboutData.section1.fields.title}}</h2>
+        </div>
+        {{{aboutData.section1.fields.desc}}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section bg-light custom-border-bottom" data-aos="fade">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-6 order-md-2">
+        <div class="block-16">
+          <figure>
+            <img src="{{aboutData.section2.fields.image.fields.file.url}}"
+              alt="{{aboutData.section2.fields.image.fields.title}}" class="img-fluid rounded">
+          </figure>
+        </div>
+      </div>
+      <div class="col-md-5 mr-auto">
+        <div class="site-section-heading pt-3 mb-4">
+             <h2 class="text-black">{{aboutData.section2.fields.title}}</h2>
+        </div>
+        {{{aboutData.section2.fields.desc}}}
+      </div>
+    </div>
+  </div>
+</div>
+<!--
+<div class="site-section bg-light custom-border-bottom" data-aos="fade">
+  <div class="container">
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 site-section-heading text-center pt-4">
+        <h2>{{aboutData.section3Title}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      {{#each aboutData.teamMembers}}
+      <div class="col-md-6 col-lg-6 mb-5">
+        <div class="block-38 text-center">
+          <div class="block-38-img">
+            <div class="block-38-header">
+              <img src="{{this.fields.image.fields.file.url}}" alt="{{this.fields.image.fields.title}}" class="mb-4">
+              <h3 class="block-38-heading h4">{{this.fields.title}}</h3>
+              <p class="block-38-subheading">{{this.fields.url}}</p>
+            </div>
+            <div class="block-38-body">
+              {{{this.fields.desc}}}
+            </div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div> -->

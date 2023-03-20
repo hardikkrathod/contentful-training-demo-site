@@ -1,0 +1,71 @@
+<div class="bg-light py-3">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 mb-0"><a href="/">Home</a> <span class="mx-2 mb-0">/</span> <strong
+          class="text-black">Product</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="site-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 filter">
+        <h3 class="mr-3 h6 text-black">Filter</h3>
+        <button type="button" class="btn btn-secondary btn-md dropdown-toggle px-4" id="dropdownMenuReference"
+          data-toggle="dropdown">Type</button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+          <a class="dropdown-item" href="/product">All</a>
+          {{#each allTypes}}
+          <a class="dropdown-item" href="?filter={{this.fields.typeName}}">{{this.fields.typeName}}</this></a>
+          {{/each}}
+          {{!-- <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Price, low to high</a>
+          <a class="dropdown-item" href="#">Price, high to low</a> --}}
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-left">
+      {{#each allProducts}}
+      <div class="col-sm-6 col-lg-4 text-center item product {{this.fields.type}}">
+        <div class="product__border">
+          <div class="product__box">
+            <a href="{{this.fields.productUrl}}">
+              <img src="{{this.fields.image.fields.file.url}}" alt="{{this.fields.image.fields.title}}"
+                class="product__image">
+          </div>
+          </a>
+          <h3 class="text-dark product__header">{{this.fields.name}}</h3>
+
+          <p class="product__packing">Packing: {{{this.fields.packing}}}</p>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+    <ul class="pagination justify-content-center pagination-md"></ul>
+  </div>
+</div>
+
+<script>
+  var pagination = $('.pagination');
+  $(document).ready(function (e) {
+    $(".dropdown-item").click(function (e) {
+      var filterVal = $(this).text();
+      getFilteredProducts(filterVal);
+    });
+    function getFilteredProducts(filterVal) {
+      $.ajax({
+        type: 'GET',
+        url: '/product?filter=' + filterVal,
+        data: { filterVal },
+        success: function (data) {
+          // alert("GOT product DATA");
+          // console.log(data);
+        },
+        error: function () {
+          // alert("No Products");
+        }
+      });
+    }
+  });
+</script>
