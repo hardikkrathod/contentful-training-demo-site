@@ -1,4 +1,7 @@
 # contentful-training-demo-site
+Clone this site then follow below steps:
 
-# Npm install
-# npm start
+1. npm install
+2. npm start
+
+Hit http://localhost:3000/ in your browser.
